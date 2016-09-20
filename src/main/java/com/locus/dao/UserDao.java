@@ -76,4 +76,16 @@ public class UserDao {
         if(users.get(userId) !=null) roles = users.get(userId).getUserRoles();
         return roles;
     }
+    public boolean isActionAllowed(String userId, ActionType action)
+    {
+
+        User user = users.get(userId);
+        if(user==null)return false;
+        Set<Role> roles = user.getUserRoles();
+        for(Role role : roles)
+        {
+            if(role.isActionAllowed(action))return true;
+        }
+        return false;
+    }
 }

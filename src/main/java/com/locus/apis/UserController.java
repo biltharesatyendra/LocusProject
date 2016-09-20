@@ -57,5 +57,11 @@ public class UserController {
         }
         return roleData;
     }
+    @RequestMapping(path = "/action", method = RequestMethod.GET)
+    public String isActionAllowed(@RequestParam String userId, @RequestParam ActionType action)
+    {
+        if(UserService.isActionAllowed(userId, action)) return "YES";
+        return "NO";
+    }
 }
 

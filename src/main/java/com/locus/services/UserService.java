@@ -40,4 +40,8 @@ public class UserService {
     {
         return userDao.getAllRoles(userId);
     }
+    public static boolean isActionAllowed(String userId, ActionType action)
+    {
+        return userDao.isActionAllowed(userId, action);
+    }
 }
