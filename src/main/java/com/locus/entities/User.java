@@ -52,7 +52,7 @@ public class User {
         System.out.println("user " + this + " has been removed from " + role);
         System.out.println("current roles are " + role);
         userRoles.remove(role);
-        System.out.println("changes roles should be " + role);
+        System.out.println("changed roles should be " + role);
     }
     public void setUserRoles(Set<Role> userRoles) {
         this.userRoles = userRoles;
