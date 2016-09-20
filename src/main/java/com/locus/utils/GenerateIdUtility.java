@@ -2,8 +2,15 @@ package com.locus.utils;
 
 
 public class GenerateIdUtility {
-    public static String generateRandomId()
+    private static int userId = 0, resourceId =0;
+    public static String generateRandomUserId()
     {
-        return "";
+        return "user@" + userId++;
+
+    }
+    public static String generateRandomResourceId()
+    {
+        return "resource@" + resourceId++;
+
     }
 }

@@ -1,7 +1,7 @@
 package com.locus.entities;
 
 
-public class UserResourceMap {
+public class UserResource {
     private String userId,resourceId;
 
     public String getUserId() {
@@ -12,19 +12,18 @@ public class UserResourceMap {
         this.userId = userId;
     }
 
-    @Override
-    public String toString() {
-        return "UserResourceMap{" +
-                "userId='" + userId + '\'' +
-                ", resourceId='" + resourceId + '\'' +
-                '}';
-    }
-
     public String getResourceId() {
         return resourceId;
     }
 
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+    @Override
+    public String toString() {
+        return "UserResource{" +
+                "userId='" + userId + '\'' +
+                ", resourceId='" + resourceId + '\'' +
+                '}';
     }
 }
